@@ -1,0 +1,72 @@
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+    color: #02529C !important;
+}
+
+.footer-padding {
+	padding-bottom: 60px;
+}
+
+.footer {
+	position: fixed;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #02529C;
+}
+
+.footer p {
+	margin-top: 25px;
+	font-size: 12px;
+  color: #fff;
+}
+
+.jumbotron {
+  background-image: url(https://media.timeout.com/images/105237092/750/422/image.jpg);
+  background-size: cover;
+  height: 150px;
+}
+
+/* Today section */
+
+#today {
+  padding: 0% 0% 3% 0%;
+}
+
+.today-box {
+  text-align: left;
+}
+
+/* Recent Section */
+
+#recent {
+  padding: 3%;
+}
+
+.recent-box {
+  text-align: center;
+}
+
+.help-box {
+  text-align: center;
+}
+
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block
+}
