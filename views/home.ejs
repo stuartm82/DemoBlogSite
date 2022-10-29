@@ -30,9 +30,7 @@
     <div class="today-box col-lg-8">
       <h1>Today</h1>
 
-      <p> <%= startingContent %> </p>
-
-      <% posts.forEach(function(post) { %>
+      <% latestPosts.forEach(function(post) { %>
       <h1> <%= post.title %> </h1>
       <p>
         <%= post.content.substring(0, 3000) + " ..." %>
@@ -52,8 +50,8 @@
       <!--Form to show the selected text as output-->
       <input type="button" class="btn btn-info btn-sm" value="Get Selection" onmousedown="getSelectedText()">
       <!-- https://www.geeksforgeeks.org/how-to-get-the-highlighted-selected-text-in-javascript/ -->
-
       <!-- connect selected text to Google translate API -->
+      <button type="button" class="btn btn-danger btn-sm" name="button">Translate</button>
     </div>
 
   </div>
@@ -65,29 +63,14 @@
 <section id="recent">
 
   <div class="row">
+    <% recentPosts.forEach(function(post) { %>
     <div class="recent-box col-lg-3">
-      <h4>Date 1</h4>
-      <img src="https://cdn.mbl.is/m2/MRHfoLptiBQYh2LncvEfh_tP8Z4=/1640x1093/smart/frimg/1/35/93/1359314.jpg" alt="Recent1">
-      <p>Test Post Here</p>
-    </div>
+      <h4><%=post?.createdAt && new Date(post?.createdAt).toJSON().slice(0,10).replace(/-/g,'/') %></h4>
 
-    <div class="recent-box col-lg-3">
-      <h4>Date 2</h4>
-      <img src="https://frettabladid.overcastcdn.com/images/540628.2e16d0ba.fill-1298x776-c100.jpg" alt="Recent2">
-      <p>Test Post Here</p>
+      <img src="<%= post.image %>" alt="RecentImage">
+      <p><%= post.title %></p>
     </div>
-
-    <div class="recent-box col-lg-3">
-      <h4>Date 3</h4>
-      <img src="https://vb.overcastcdn.com/images/118649.2e16d0ba.fill-2012x1160-c100.jpg" alt="Recent3">
-      <p>Test Post Here</p>
-    </div>
-
-    <div class="recent-box col-lg-3">
-      <h4>Date 4</h4>
-      <img src="https://vb.overcastcdn.com/images/118357.2e16d0ba.fill-2012x1160-c100.jpg" alt="Recent4">
-      <p>Test Post Here</p>
-    </div>
+    <% }) %>
 
   </div>
 
